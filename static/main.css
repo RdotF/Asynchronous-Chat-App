@@ -23,20 +23,42 @@ nav {
     padding: 0;
 }
 
+.chat-room {
+    display: flex;
+    width: 90vh;
+    min-height: 80vh;
+    flex-direction: column;
+    border: 1px solid #E0E0E0;
+    border-radius: 30px;
+    padding: 20px 16px;
+}
+ul {
+    list-style-type: none;              /* Remove default list styles */
+    padding: 0;                        /* Remove list padding */
+    margin: 0; 
+
+}
 .my-message {
-    text-align: right;             
-    background-color: #3ff33f;   
-    padding: 10px;
-    border-radius: 5px;
+ align-self: flex-end;               /* Align user's messages to the right */
+    text-align: right;                  /* Align text to the right */
+    padding: 20px;
+    background-color: #3ff33f;          /* Background for user messages */
+    color: #121212;                     /* Text color */
+    border-radius: 24px;               /* Rounded corners */
     margin: 5px 0;
-    color: #121212;
+                         /* Margin around messages */
+    max-width: 70%;
+    justify-self: end;
+    
 }
 .peer-message {
-    text-align: left;             
-    background-color: #121212;     
-    padding: 10px;
-    border-radius: 5px;
-    margin: 5px 0;
+ align-self: flex-start;             /* Align peer messages to the left */
+    text-align: left;                   /* Align text to the left */
+    background-color: #121212;          /* Background for peer messages */
+    padding: 20px;
+    border-radius:  24px;                 /* Rounded corners */
+    margin: 5px 0;                     /* Margin around messages */
+    max-width: 70%; 
 }
 #msg {
     width: auto;
@@ -46,6 +68,7 @@ nav {
     background-color: #333333; 
     color: #E0E0E0; 
     transition: background-color 0.3s; 
+    font-size: 24px;
 }
 
 #msg:focus {
@@ -61,15 +84,13 @@ button {
     color: white;
     cursor: pointer;
     transition: background-color 0.3s;
+    font-size: 24px;
 }
 
 button:hover {
     background-color: #3700B3;
 }
 
-li {
-  padding: 20px;
-}
 
 .input-class {
   display: flex;
@@ -78,4 +99,9 @@ li {
   align-items: center;
   justify-content: center;
   gap:20px;
+}
+
+li {
+  padding: 20px;
+  font-size: 24px;
 }
